@@ -157,6 +157,10 @@ b {
   text-align: left;
 }
 
+a {
+  color: white;
+}
+
 /* full screen type layout */
 @media all and (min-width: 900px) {
   .container {
