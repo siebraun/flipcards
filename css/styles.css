@@ -87,7 +87,8 @@ main p {
   margin-top: 10px;
 }
 
-.card-container {
+.card-container,
+.card-container-snacks {
   display: flex;
 }
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -97,6 +98,18 @@ main p {
   height: 400px;
   perspective: 1000px;
   margin: 20px;
+}
+
+.card-container-snacks .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 450px;
+  perspective: 1000px;
+  margin: 20px;
+}
+
+b {
+  text-decoration-line: underline;
 }
 
 /* This container is needed to position the front and back side */
@@ -145,7 +158,7 @@ main p {
 }
 
 /* full screen type layout */
-@media all and (min-width: 768px) {
+@media all and (min-width: 900px) {
   .container {
     flex-direction: row;
     flex-wrap: wrap;
@@ -167,5 +180,16 @@ main p {
   }
   footer {
     order: 4;
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .card-container,
+  .card-container-snacks {
+    flex-direction: column;
+  }
+
+  header {
+    height: max-content;
   }
 }
